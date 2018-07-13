@@ -1,0 +1,51 @@
+server:
+  port: 8080
+  context-path: /wanbei
+
+
+
+#数据库配置
+jdbc:
+  druid:
+    url: jdbc:mysql://127.0.0.1:3306/test?useUnicode=true&characterEncoding=UTF8&zeroDateTimeBehavior=convertToNull
+    user: root
+    password: root
+    filters: stat
+    maxActive: 20
+    initialSize: 1
+    maxWait: 60000
+    minIdle: 1
+    timeBetweenEvictionRunsMillis: 60000
+    minEvictableIdleTimeMillis: 300000
+    validationQuery: select 'x'
+    testWhileIdle: true
+    testOnBorrow: false
+    testOnReturn: false
+    poolPreparedStatements: true
+    maxOpenPreparedStatements: 20
+
+
+wx:
+  appid: wx27f347f2f4c76849
+  appsecret: ./natapp -authtoken 46d4fe841bd7192c
+  token: chenhaitao
+
+
+redis:
+  host: 39.108.144.11
+  port: 6379
+  password: admin
+  defaultdb: 0
+  timeout: 550
+  maxTotal: 300
+  maxIdle: 100
+  maxWait: 1000
+
+spring:
+  jackson:
+    dateFormat: yyyy-MM-dd HH:mm:ss
+    serialization:
+      indent_output: true
+    timeZone: GMT+8
+  session:
+    store-type: redis
