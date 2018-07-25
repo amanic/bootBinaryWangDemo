@@ -27,7 +27,7 @@ jdbc:
 
 wx:
   appid: wx27f347f2f4c76849
-  appsecret: ./natapp -authtoken 46d4fe841bd7192c
+  appsecret: bfbf986e8a23178486f30f74c1ad0929
   token: chenhaitao
 
 
@@ -49,3 +49,7 @@ spring:
     timeZone: GMT+8
   session:
     store-type: redis
+
+logging:
+  level:
+    com.amateur.wanbei.dao.mapper: debug
